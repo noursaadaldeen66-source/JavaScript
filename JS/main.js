@@ -98,17 +98,17 @@ function student(ar, pr, ph, math) {
   }
 
   if (decD >= 7) {
-    console.log(`${ar} - ${pr} - ${ph} - ${math}'الطالب ناجح  '`);
+    return `${ar} - ${pr} - ${ph} - ${math}'الطالب ناجح  '`;
   } else if (decD == 5) {
-    console.log(`${ar} - ${pr} - ${ph} - ${math}'الطالب ناجح مساعدة علامة '`);
+    return `${ar} - ${pr} - ${ph} - ${math}'الطالب ناجح مساعدة بعلامة '`;
   } else if (decD == 3 || decD == 4) {
-    console.log(`${ar} - ${pr} - ${ph} - ${math}'الطالب ناجح مساعدة بعالمتين'`);
+    return `${ar} - ${pr} - ${ph} - ${math}'الطالب ناجح مساعدة بعلامتين'`;
   } else {
-    console.log(`${ar} - ${pr} - ${ph} - ${math}'الطالب راسب  '`);
+    return `${ar} - ${pr} - ${ph} - ${math}'الطالب راسب  '`;
   }
 }
 
-console.log(student(58, 59, 60, 60));
+console.log(student(60, 58, 60, 60));
 
 // التمرين الثاني:
 // لنفترض أن عدد أيام أي شهر في السنة 30 يوم )ال يوجد 31 أو 28(
