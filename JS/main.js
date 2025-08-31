@@ -28,6 +28,41 @@
 
 // console.log(summing(7));
 
+// // كتابة تابع يأخذ كمعامل رقم صحيح موجب ويعيد
+//   // اذا كان غير ذلك "fuls" اذا كان الرقم  اولي و  "true"
+
+// function isPrime(x){
+//     i=1
+//     if(i >= x){
+//         return false;
+//     }
+//     else{
+
+//          y = 2;
+//         while( y < x ){
+
+//             if(x % y === 0 ){
+//                 return false;
+//             }
+//             y++;
+//         }
+//         return true;
+//     }
+// }
+// console.log(isPrime(4));
+
+// //تابع يقوم بطباعة الاعداد الاولية من 1 الى 1000
+// function print (){
+//     x=1;
+//     while(x <= 1000){
+//         if(isPrime(x)){
+//             console.log(x);
+//         }
+//         x++;
+//     }
+// }
+// print();
+
 // التمرين األول:
 // ليدنا أربع عالمات لمواد جامعية )رياضيات – فيزياء – برمجة – عربي(
 // نقول ان الطالب ناجح بمادة ما إذا حصل على عالمة أكبر أو تساوي 60
@@ -85,8 +120,15 @@ console.log(student(58, 59, 60, 60));
 // أكبر عمرا وذلك بشرط القيام بعملية مقارنة واحدة فقط ً نريد كتابة برنامج يعرف أي من الشخصين األول ام
 
 function oldder(Day1, month1, year1, Day2, month2, year2) {
-  let man1 = "";
-  let man2 = "";
-  let count = 6;
-  while (count >= 0) {}
+  function formatTwoDigits(num) {
+    return num < 10 ? "0" + num : num;
+  }
+  let x = "" + year1 + formatTwoDigits(month1) + formatTwoDigits(Day1);
+  let y = "" + year2 + formatTwoDigits(month2) + formatTwoDigits(Day2);
+
+  if (x > y) {
+    return "الشخص الثاني أكبر";
+  } else return "الشخص الأول أكبر";
 }
+
+console.log(oldder(28, 6, 2022, 2, 8, 2022));
