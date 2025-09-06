@@ -1,0 +1,143 @@
+//Task 1 name :  hideCreditCard  D:M
+
+function hideCreditCard(cardNumber) {
+  let result = "************";
+  if (cardNumber.length == 16) {
+    for (let i = 12; i < cardNumber.length; i++) {
+      result += cardNumber[i];
+    }
+  } else {
+    return "wrong cardNumber";
+  }
+  return result;
+}
+
+console.log(hideCreditCard("1234567891234567"));
+("************4567");
+
+//Task 2 name:Smailey Faces D:m
+
+function replaceSmiley(input) {
+  let res = "";
+  ///
+  for (let i = 0; i < input.length; i++) {
+    let find = false;
+    for (let j = 0; j < input.length; j++) {
+      if (input[i] == ":" && input[i + 1] == ")") {
+        find = true;
+      }
+    }
+    if (find) {
+      res += ":(";
+      i++;
+    } else {
+      res += input[i];
+    }
+  }
+  return res;
+}
+
+// console.log(replaceSmiley("smile :).....:)"));   'smile :(.....:('
+
+//Task 3 name: find first and lastindex D:m
+
+function findFirstAndLast(arr, num) {
+  let arrF = [];
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (num == arr[i] && count == 0) {
+      arrF[0] = i;
+      count++;
+    } else if (num == arr[i] && count > 0) {
+      arrF[1] = i;
+    }
+  }
+  if (arrF[1] == undefined) {
+    arrF[1] = arrF[0];
+  }
+  return arrF;
+}
+
+// let arr1 = [10, 20, 30];
+// console.log(findFirstAndLast(arr1, 10));   [ 0, 0 ]
+
+//Task 4 name: Largest Digitn Swap D:m
+
+function findLargest(num) {
+  let FLR = 0;
+  let num1 = num.toString();
+  let max = num1[0];
+  for (let i = 0; i < num1.length; i++) {
+    if (max < num1[i]) {
+      max = num1[i];
+    }
+  }
+  FLR = max;
+  for (let i = 0; i < num1.length; i++) {
+    if (max != num1[i]) {
+      FLR += num1[i];
+    }
+  }
+  return FLR;
+}
+
+// console.log(findLargest(7845759));   '9784575'
+
+//Task 5 name: repeat Vowels D:m
+
+function repeatVowels(str) {
+  let arV = ["a", "e", "i", "o", "u"];
+  let res = "";
+  ///
+  for (let i = 0; i < str.length; i++) {
+    let find = false;
+    for (let j = 0; j < arV.length; j++) {
+      if (str[i] === arV[j]) {
+        find = true;
+      }
+    }
+
+    if (find) {
+      res += str[i];
+      res += str[i];
+    } else {
+      res += str[i];
+    }
+  }
+  return res;
+}
+//console.log(repeatVowels("hello world")); 'heelloo woorld'
+
+//Task 6 name:Shortest Word D:m
+
+function findShortestWord(str) {
+  let indexmin = 0;
+  let counti = 0;
+  let sum = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == " ") {
+      indexmin = counti;
+      counti = i;
+      if (counti - indexmin > sum);
+    }
+  }
+
+  return res;
+}
+
+//Task 7 name:convert To PascalCase D:m
+
+function convertToPascalCase(str) {}
+
+//Task 8 name: isSpOnGeCaSe D:m
+
+function isSpOnGeCaSe(str) {}
+
+//Task 9 name : findSecondLargest D:m
+
+function findSecondLargest(arr) {}
+
+//Task 10 name : swap case of first last characters D:m
+
+function swapCaseFirstLast(str) {}
